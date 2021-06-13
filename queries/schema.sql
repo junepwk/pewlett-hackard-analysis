@@ -54,4 +54,18 @@ CREATE TABLE dept_emp (
 	PRIMARY KEY (emp_no, dept_no)
 );
 					  
+-- Check the data
 SELECT * FROM departments;
+SELECT * FROM employees;
+SELECT * FROM dept_emp;
+SELECT * FROM salaries;
+SELECT * FROM titles;
+SELECT * FROM dept_manager;
+
+
+
+
+
+
+
+
