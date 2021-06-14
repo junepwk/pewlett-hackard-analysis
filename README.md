@@ -21,7 +21,12 @@ The objective is to help Pewlett Hackard future-proof the company by using Postg
 ![retiring_titles_output](https://github.com/junepwk/pewlett-hackard-analysis/blob/main/output/retiring_titles_output.png)
 
 ### Employees Eligible for the Mentorship Program
-- 
+
+- Pewlett Hackard is interested in introducing a mentor program to alleviate losing a large amount of workforce to retirement.  This program would allow experienced and successful employees to partake in mentoring new hires part-time.
+- By using the 'COUNT' function on the [mentorship_eligibility](https://github.com/junepwk/pewlett-hackard-analysis/blob/main/data/mentorship_eligibility.csv) table, we will get a table of number of employees who are eligible for the program for each title.
+- The table shows that the 'manager' department does not have any eligibility for mentorship despite having the possibility of 2 managers retiring.
+
+![mentors_count_output](https://github.com/junepwk/pewlett-hackard-analysis/blob/main/output/mentors_count_output.png)
 
 ## Summary
 
