@@ -29,4 +29,25 @@ The objective is to help Pewlett Hackard future-proof the company by using Postg
 ![mentors_count_output](https://github.com/junepwk/pewlett-hackard-analysis/blob/main/output/mentors_count_output.png)
 
 ## Summary
+Based on the analyses, it appears that Pewlett Hackard will experience a huge outflow of workforce.  In an effort to lessen the impact of the "silver tsunami", the company is interested in implementing a mentorship program.  However, with the amount of analyses performed thus far, the number of eligible mentors would not provide enough support to handle the number of employees retiring.
+1. There are a total of 90,398 employees who are eligible for retirement.
 
+```Sql
+-- Total of employees who are eligible for retirement
+SELECT SUM(count)
+FROM retiring_titles;
+```
+2. There are a total of 1,549 eligible employees who could partake in the program.  The substantial difference in the numbers of retiring employees and potential mentors implies that there aren't enough qualified, retirement-ready employees in the departments to mentor the next generation of workers.
+
+```sql
+-- Count how many eligible mentors per title
+SELECT COUNT(emp_no), title
+INTO mentors_count
+FROM mentorship_eligibilty
+GROUP BY title
+ORDER BY COUNT(emp_no) DESC;
+
+-- Total eligible mentors
+SELECT SUM(count)
+FROM mentors_count;
+```
