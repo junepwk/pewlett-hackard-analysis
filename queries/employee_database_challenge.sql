@@ -46,3 +46,20 @@ FROM employees as e
 WHERE(e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND (de.to_date = '9999-01-01')
 ORDER BY e.emp_no;
+
+-- Count how many eligible mentors per title
+SELECT COUNT(emp_no), title
+INTO mentors_count
+FROM mentorship_eligibilty
+GROUP BY title
+ORDER BY COUNT(emp_no) DESC;
+
+SELECT * FROM retiring_titles;
+
+-- Total of employees who are eligible for retirement
+SELECT SUM(count)
+FROM retiring_titles;
+
+-- Total eligible mentors
+SELECT SUM(count)
+FROM mentors_count;
